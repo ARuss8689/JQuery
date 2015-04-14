@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		
+
+		
+		
+
+		<style>
+			.dogs {
+				background-color: orange;
+				width: 500px;
+				height: 200px;
+			}
+			.cats {
+				background-color: blue;
+				width: 900px;
+				height: 100px;
+				margin-left: 150px;
+			}
+			.basketball {
+				background-image: url("puzzle.jpg");
+				float: right;
+				height: 470px;
+				width: 470px;
+				color: red;
+				padding-top: 10px;
+			}
+			.football {
+				height: 300px;
+				width: 400px;
+				background-color: green;
+				color: yellow;
+				clear: right;
+				margin: 0 auto;
+			}
+		</style>	
+	</head>
+<body>
+
+	<div class="dogs">
+		Pug, Chihuahua, Boston Terrier
+	</div>
+
+	<div class="cats">	
+		Brown Cat, Black Cat, White Cat
+	</div>
+
+	<div class="basketball">
+		<b>New York Knicks, Golden State Warriors, Oklahoma City Thunder</b>
+	</div>
+
+	<div class="football">
+		New York Giants, Indianapolis Colts, Green Bay Packers
+	</div>	
+
+
+	
+	<script>
+		$(document).ready(function(){
+   		
+		var fadeindogs = function(){
+			$(".dogs").fadeIn(3000)
+		};	
+		var slideitdown = function(){
+			$(".basketball").slideDown(4000)
+		};
+   		$(".dogs").click(function(){
+         $(".dogs").fadeOut(3000, fadeindogs)
+   			});
+
+ 		$(".basketball").slideUp(4000)
+ 		;
+
+ 		$(".cats").animate({
+ 			opacity:'0.5',
+ 			width:'500px',
+ 			height:'50px'
+ 		}, 4000);
+
+ 		$(".cats").click(slideitdown);
+
+ 		$(".football").animate({
+ 			marginLeft: '50px'
+ 		}, 4000);
+ 		
+ 		})
+		;
+
+
+		</script>
+</body>
+
+</html>
